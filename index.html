@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/155c6d0568.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id = "header">
+     <div class = "container">
+       
+        <nav>
+           <label class="logo">Lahari Gupta</label>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#skillls">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            
+            <h1>Hi, I'm Lahari</h1>
+        </div>
+        <!---------About Section--------->
+        <div id="About">
+            <div class = "About-Heading">
+                <h1><a href="#">About Me</a></h1>
+                <div class="About-text">
+                <p>Hi,I'm Lahari.</p>
+                <p>I am currently doing B.tech in Electronics and Communication engineering at NIT Agartala.I have alwyas been the person who tried to experiment new things.</p>
+                <p>I have switched many domains.Currently I love doing things with java.</p>
+                <p>I am alwyas open to learn new stuff and open to constructive feedback.</p>
+                </div>
+                <div class="button-box">
+                    <a href="https://drive.google.com/file/d/19o8ocE25OqJJSFlh8R2lhwe4KgS3ns4L/view?usp=drive_link" class="button">My Resume</a>
+                </div>
+            </div>
+
+        </div>
+        <!---------------Skills----------->
+            
+            
+              <div id = "skillls" class="Skills">
+                <h1><a ref="#">Skills</a></h1>
+                <div class="Skills-list">
+                    <div>
+                        <i class="fa-brands fa-java"></i>
+                        <h2>Java</h2>
+                        <p>Currently using java for coding stuffs</p>
+                    </div>
+                   
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>Tried to design basic stuffs using web designing</p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>API Design</h2>
+                        <p>I designed an API for conerting an img file of a laboratory report into text</p>
+                    </div>
+                    </div>
+                </div>
+
+            <!-------------Education------------->
+            <div id = "education" class="Education">
+                <h1><a ref = "#">Education</a></h1>
+                <div class ="Education-list">
+                    <ul>
+                        <li><span>2017</span><br>X(Secondary), <i>Shishu Bihar H/S School</i>, CGPA: 9.1/10</li>
+                        <li><span>2019</span><br>XII(Higher Secondary), <i>Shishu Bihar H/S School</i>, CGPA: 7.9/10</li>
+                        <li><span>2020-2024</span><br>B.Tech in Electronics and Communication Engineering, <i>NIT Agartala</i>, CGPA: 8.26/10</li>
+                    </ul>
+
+
+                </div>
+                
+            </div>
+
+
+            <!--------------Contact------------------->
+            <div id="contact">
+                <div class="contact-elements">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="contact-heading">Contact Me</h1>
+                            <p><i class="fa-solid fa-envelope"></i>lahari557@gmail.com</p>
+                            <p><i class="fa-solid fa-paper-plane"></i>9863352566</p>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/lahari.gupta.1"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/lahariguptaa/"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://twitter.com/LahariGupt48930"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/laharigupta/"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-right">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn">Submit</button>
+                            </form>
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              </div>
+              <div class="copyright">
+                <p>Copyright @Lahari<i class="fa-solid fa-heart"></i></p>
+              </div>
+
+            </div>
+            <script>
+              
+              var sidemenu = document.getElementById("sidemenu");
+
+              
+              function openmenu(){
+                sidemenu.style.right = "0";
+              }
+              function closemenu(){
+                sidemenu.style.right = "-200px";
+              }
+
+            </script>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwdlQHnmOCeJyOqDD9SfiaVXyXa_jdCinl5TbAnNscIDIx270ZM9h2xI6wGXbPM9KNCMw/exec'
+                const form = document.forms['submit-to-google-sheet']
+                const msg = document.getElementById("msg")
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML = "Message sent successfully "
+                        setTimeout(function(){
+                            msg.innerHTML = ""
+
+                        },5000)
+                       form.reset()
+                        
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+              </script>
+        
+            
+        
+        
+     
+    
+    
+</body>
+</html>

@@ -1,0 +1,365 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*------Body colour-----*/
+body{
+    background-color: #040404;
+    color: white;
+}
+
+/*--------Background-image-----------*/
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image:url(Images/Background\ img\ 3.jpg);
+
+    
+    background-size: 450px;
+    background-blend-mode: darken;
+   background-repeat: no-repeat;
+   background-position:right;
+   
+   
+      
+}
+.container{
+    padding: 10px 5%;
+}
+
+/*----------Navigation menu--------------*/
+nav{
+    
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+label.logo{
+    color: white;
+    font-size: 22px;
+    width: 160px;
+   
+    font-weight: bold;
+}
+
+nav ul li{
+    
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    
+}
+nav li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text h1{
+    padding: 20% 20%;
+    font-size: 60px;
+    
+}
+/*------------About-------*/
+#About{
+    padding: 80px 30px;
+    
+}
+
+
+h1 a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+    
+}
+.About-Heading h1{
+    padding: 10px 10px;
+    font-size: 50px;
+}
+
+h1 a::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+h1 a:hover::after{
+    width: 100%;
+}
+
+.About-text{
+    padding: 20px 20px;
+}
+.button{
+    border-color:#ff004f ;
+    border-style: solid;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.button-box{
+    padding: 0px 20px;
+}
+.button a{
+    color:white;
+    background-color: black;
+}
+.button a:hover{
+    background-color: grey;
+    color:black;
+}
+/*-------Skills----------*/
+
+.Skills h1{
+    padding: 20px 40px;
+    font-size: 50px;
+}
+.Skills-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 40px;
+    
+    padding: 0px 40px;
+    padding-bottom: 40px;
+
+}
+.Skills-list p{
+    padding: 20px 0px;
+}
+.Skills-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s transform 0.5s;
+}
+.Skills-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.Skills-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.Skills-list div h2 p{
+      font-size: 40px;
+}
+.Skills-list div:hover{
+    background-color: #ff004f;
+    transform: translateY(-10px);
+}
+
+/*---------Education-------------*/
+
+.Education{
+    padding: 40px 40px;
+    
+}
+.Education h1{
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+.Education h1::after{
+    content:'';
+    width: 0px;
+    height: 3px;
+    background: #ff004f;
+    left: 0px;
+    bottom: -6px;
+    position: absolute;
+    transition: 0.5s;
+    font-size: 50px;
+
+
+}
+.Education h1:hover::after{
+   width: 100%;
+}
+.Education-list ul{
+
+    margin-bottom: 40px;
+}
+.Education-list ul li{
+    padding: 0px 10px;
+    list-style: none;
+    text-decoration: none;
+    padding-bottom: 20px;
+    
+}
+.Education-list ul li span{
+
+    color: #ff004f;
+}
+/*------------Contact---------*/
+.contact-elements{
+    padding: 0 40px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-heading{
+    font-size: 50px;
+    
+}
+.contact-left{
+    flex-basis: 35%;
+
+}
+.contact-right{
+    flex-basis: 60%;
+    
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin: 15px;
+    font-size: 25px;
+}
+.social-icons {
+    margin-top: 30px;
+    
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 10px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+    
+}
+.btn{
+    display: inline-block;
+    background: #ff004f;
+    border-radius: 5px;
+    padding: 14px 60px;
+    margin-top: 20px;
+    border: 0px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.contact-right form{
+     width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0px;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/*------CSS for small screens--------*/
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+#header{
+    background-image: url(Images/small\ screen\ image2.jpg);
+}
+.header-text h1{
+    font-size:20px;
+    margin-top:100%;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding: 0% 0;
+    
+    
+}
+#About{
+    padding-top: 170px;
+}
+nav .fa-solid{
+    display: block;
+    font-size: 25px;
+    
+}
+nav ul{
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+}
+nav ul li{
+    display: block;
+    margin: 25px;
+}
+nav ul .fa-solid{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+}
+
+.contact-left, .contact-right{
+    flex-basis: 100%;
+}
+.copyright{
+    font-size: 14px;
+}
+
+
+
+
+}
+#msg {
+    color: #eae9ac;
+    display: block;
+
+}
+    
