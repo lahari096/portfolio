@@ -23,7 +23,8 @@ body{
     background-size: 450px;
     background-blend-mode: darken;
    background-repeat: no-repeat;
-   background-position:right;
+   background-position: right ;
+   background-attachment: fixed;
    
    
       
@@ -303,21 +304,24 @@ form input,form textarea{
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 750px){
 #header{
-    background-image: url(Images/small\ screen\ image2.jpg);
-}
-.header-text h1{
-    font-size:20px;
-    margin-top:100%;
-    padding-left: 10px;
-    padding-right: 20px;
-    padding: 0% 0;
+    background-image: url(Images/small\ screen\ final\ image\ a.jpg);
+    background-position: right top;
     
     
 }
+ .header-text h1{
+    font-size:30px;
+    margin-top:90%;
+    
+    padding: 20px 20px;
+    
+    
+} 
+
 #About{
-    padding-top: 170px;
+    padding-top: 90px;
 }
 nav .fa-solid{
     display: block;
@@ -362,4 +366,67 @@ nav ul .fa-solid{
     display: block;
 
 }
+@media only screen and (max-width: 900px){
+    #header{
+        background-image: url(Images/small\ screen\ final\ image\ a.jpg);
+        background-position: right top;
+        
+        
+    }
+     .header-text h1{
+        font-size:35px;
+        margin-top: 90%;
+        
+        padding: 30px 20px;
+       
+        
+        
+    } 
+    
+    #About{
+        padding-top: 90px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+    
+    
+    
+    
+    }
+    #msg {
+        color: #eae9ac;
+        display: block;
+    
+    }
     
